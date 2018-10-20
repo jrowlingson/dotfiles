@@ -1,0 +1,75 @@
+# automatically renumber tmux windows
+set -g renumber-windows on
+
+# unbind default prefix and set it to ctrl+j
+unbind C-b
+set -g prefix C-space
+bind C-space send-prefix
+
+# make delay shorter
+set -sg escape-time 0
+
+# make window/pane start with 1
+set -g base-index 1
+setw -g pane-base-index 1
+
+set-option -g set-titles on
+set-option -g set-titles-string "#W"
+
+# activity monitoring
+setw -g monitor-activity off
+set -g visual-activity off
+
+# rather than constraining window size to the max size of any client connected
+# to the *session*, contrain window size to the max size of any client
+# connected to *that window*.
+setw -g aggressive-resize on
+
+# =========================================================
+# key bindings
+# =========================================================
+
+# reload config file
+bind r source-file ~/.tmux.conf \; display "config reloaded!"
+
+# split window and fix path for tmux 1.9
+bind | split-window -h -c "#{pane_current_path}"
+bind - split-window -v -c "#{pane_current_path}"
+
+# pane movement shortcuts
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+# synchronize all panes in a window
+bind y setw synchronize-panes
+
+# resize pane shortcuts
+bind -r H resize-pane -L 10
+bind -r J resize-pane -D 10
+bind -r K resize-pane -U 10
+bind -r L resize-pane -R 10
+
+# enable mouse support for switching panes/windows
+setw -g mouse on
+
+# set vi mode for copy mode
+setw -g mode-keys vi
+
+# more settings to make copy-mode more vim-like
+unbind [
+bind Escape copy-mode
+unbind p
+bind p paste-buffer
+bind -Tcopy-mode-vi 'v' send -X begin-selection
+bind -Tcopy-mode-vi 'y' send -X copy-pipe-and-cancel "tmux save-buffer - | reattach-to-user-namespace pbcopy"
+
+# buffers to/from mac clipboard (pragprog)
+bind C-c run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
+bind C-v run "tmux set-buffer $(reattach-to-user-namespace pbpaste); tmux paste-buffer"
+
+# =========================================================
+# appearance settings
+# =========================================================
+# source ~/.dotfiles/tmux/base16.sh

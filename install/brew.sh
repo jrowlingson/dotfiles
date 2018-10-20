@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo -e "\\n\\nbrew install"
+echo "======================"
 if test ! "$(which brew)"; then
   echo "installing homebrew"
   ruby -e "$( curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install )"
@@ -11,6 +13,7 @@ formulas=(
   node
   python
   ripgrep
+  watchman
   tmux
   yarn
   zsh

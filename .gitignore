@@ -1,0 +1,10 @@
+config/nvim/plugged/*
+config/nvim/.netrwhist
+
+# private config (mostly work related)
+zsh/zshrc_local.symlink
+
+# cheatsheet + todos
+notes.md
+
+*.swo

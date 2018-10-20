@@ -1,0 +1,187 @@
+snippet s
+set(this, '$1', $0)
+endsnippet
+
+snippet sp
+setProperties(${1:this}, {
+  $2: $0
+})
+endsnippet
+
+snippet t
+this.$0
+endsnippet
+
+snippet ${t
+${this.$0
+endsnippet
+
+snippet ts
+test('$0', async function(assert) {
+	assert.ok(true)
+})
+
+endsnippet
+
+snippet awfi
+await fillIn($1, $2)
+endsnippet
+
+snippet awt
+await triggerKeyEvent($1, '${2:keyup}', ${3:ENTER_KEY_CODE})
+$0
+endsnippet
+
+snippet as
+await settled()
+endsnippet
+
+snippet awc
+await click($0)
+endsnippet
+
+snippet ax
+assert.expect($0)
+endsnippet
+
+snippet ao
+assert.ok($0)
+endsnippet
+
+snippet aeq
+assert.equal($1, $0)
+endsnippet
+
+snippet ad
+assert.dom($0)
+endsnippet
+
+snippet ae
+assert.dom($0).exists()
+endsnippet
+
+snippet adne
+assert.dom($0).doesNotExist()
+endsnippet
+
+snippet ait
+assert.dom($1).includesText($0)
+endsnippet
+
+snippet aht
+assert.dom($1).hasText($0)
+endsnippet
+
+snippet ahv
+assert.dom($1).hasValue($0)
+endsnippet
+
+snippet adnhv
+assert.dom($1).doesNotHaveValue($0)
+endsnippet
+
+snippet ahc
+assert.dom($1).hasClass('$0')
+endsnippet
+
+snippet adnhc
+assert.dom($1).doesNotHaveClass('$0')
+endsnippet
+
+snippet cnb
+classNameBindings: [ '$1:${0:class-name}' ],
+
+endsnippet
+
+snippet (t
+(this.$0
+endsnippet
+
+snippet f
+$1($2) {
+	$0
+},
+endsnippet
+
+snippet this.s
+this.set($0)
+endsnippet
+
+snippet e
+export $0
+endsnippet
+
+snippet c
+const $0
+endsnippet
+
+snippet cl
+console.log($0)
+endsnippet
+
+snippet clh
+console.log("HERE")
+endsnippet
+
+snippet cls
+console.log(\`$0\`)
+endsnippet
+
+snippet clv
+console.log(\`$1: ${$0}\`)
+endsnippet
+
+snippet cp
+computed('$0', function() {
+}),
+
+endsnippet
+
+snippet i
+import $1 from '$0'
+endsnippet
+
+snippet ie
+import { $0 } from '@ember/$1'
+endsnippet
+
+snippet ieo
+import { $0 } from '@ember/object'
+endsnippet
+
+snippet m 
+module('$1', function(hooks) {
+	$0
+})
+
+endsnippet
+
+snippet die
+didInsertElement() {
+	this._super(...arguments)
+	console.log('$0')
+},
+
+endsnippet
+snippet in
+init() {
+	this._super(...arguments)
+},
+
+endsnippet
+
+snippet su
+	this._super(...arguments)
+endsnippet
+
+snippet a
+actions: {
+	foo() {
+		$0
+	}
+},
+endsnippet
+
+snippet r
+return $0
+endsnippet

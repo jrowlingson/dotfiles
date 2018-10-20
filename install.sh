@@ -5,10 +5,9 @@ echo "starting install..."
 source install/link.sh
 
 # macOS specific install
-#if [ "$(uname)" == "Darwin" ]; then
-#  echo -e "\\n\\nrunningon macOS"
-#  
-#  source install/brew.sh
-#fi
+if [ "$(uname)" == "Darwin" ]; then
+  source install/brew.sh
+  source install/mac_os.sh
+fi
 
-echo "done. reload your terminal."
+echo -e "\n\n🙌 setup complete. reload your terminal."

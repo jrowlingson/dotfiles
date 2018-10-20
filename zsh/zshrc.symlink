@@ -8,9 +8,47 @@ command_exists() {
 # display how long all tasks over 10 seconds take
 export REPORTTIME=10
 
+# define the code directory. this is where my code exists and where I want the `c`
+# autocomplete to work from exclusively
+if [[ -d ~/code ]]; then
+  export CODE_DIR=~/code
+fi
+
+# source all .zsh files inside of the zsh/ directory
+for config ($ZSH/**/*.zsh) source $config
+
+if [[ -a ~/.zshrc_local ]]; then
+  source ~/.zshrc_local
+fi
+
+# initialize autocomplete
+autoload -U compinit add-zsh-hook
+compinit
+for config ($ZSH/**/*.zsh) source $config
+
+export EDITOR='nvim'
+export GIT_EDITOR='nvim'
+
+# adding path directory for custom scripts
+export PATH=$PATH:$DOTFILES/bin
+
+# add a config file for ripgrep (rg)
+export RIPGREP_CONFIG_PATH="$HOME/.rgrc"
+
+# inserted by fzf install
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-alias c="clear"
-alias l="ls -la"
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-alias ..="cd .."
+# add color to man pages
+export MANROFFOPT='-c'
+export LESS_TERMCAP_mb=$(tput bold; tput setaf 2)
+export LESS_TERMCAP_md=$(tput bold; tput setaf 6)
+export LESS_TERMCAP_me=$(tput sgr0)
+export LESS_TERMCAP_so=$(tput bold; tput setaf 3; tput setab 4)
+export LESS_TERMCAP_se=$(tput rmso; tput sgr0)
+export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 7)
+export LESS_TERMCAP_ue=$(tput rmul; tput sgr0)
+export LESS_TERMCAP_mr=$(tput rev)
+export LESS_TERMCAP_mh=$(tput dim)
