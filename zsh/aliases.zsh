@@ -5,6 +5,7 @@ alias reload!='RELOAD=1 source ~/.zshrc'
 alias c="clear"
 alias l="ls -laG"
 alias q="exit"
+alias k="kill -9"
 
 # editing
 alias dot="cd ~/.dotfiles && nvim"
