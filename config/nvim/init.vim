@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/plugged')
   set autoread
   set hidden
 
+  set noro
   set history=1000
   set textwidth=120
 
