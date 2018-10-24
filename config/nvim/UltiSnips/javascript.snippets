@@ -45,7 +45,7 @@ assert.expect($0)
 endsnippet
 
 snippet ao
-assert.ok($0)
+assert.ok(${0:true})
 endsnippet
 
 snippet aeq
@@ -125,6 +125,10 @@ endsnippet
 
 snippet cls
 console.log(\`$0\`)
+endsnippet
+
+snippet clvj
+console.log(\`$1: ${JSON.stringify($0)}\`)
 endsnippet
 
 snippet clv
