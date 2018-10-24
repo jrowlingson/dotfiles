@@ -6,9 +6,9 @@ alias c="clear"
 alias l="ls -laG"
 alias q="exit"
 alias k="kill -9"
+alias dot="cd ~/.dotfiles && nvim"
 
 # editing
-alias dot="cd ~/.dotfiles && nvim"
 alias v="nvim"
 alias vim='nvim'
 
