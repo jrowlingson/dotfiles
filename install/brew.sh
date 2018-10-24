@@ -9,12 +9,13 @@ fi
 
 formulas=(
   fzf
+  irssi
   neovim
   node
   python
   ripgrep
-  watchman
   tmux
+  watchman
   yarn
   zsh
 )
