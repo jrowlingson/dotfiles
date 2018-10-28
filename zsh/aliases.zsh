@@ -26,9 +26,10 @@ alias h="cd ~"
 
 # web dev
 alias e="ember"
+alias eb="ember b"
+alias es="ember s"
 alias et="ember t"
 alias etm="ember t -s -m "
-alias es="ember s"
 alias ember-reset='rm -rf node_modules tmp bower_components dist && yarn && bower install'
 alias ember-exam='ember exam --split=4 --parallel && ember coverage-merge'
 alias y="yarn"
@@ -36,6 +37,7 @@ alias y="yarn"
 # git
 alias g="git"
 alias gl="git l"
+alias gb="git branch"
 alias gp="git pull"
 alias ga="git add \\."
 alias gap="git add -p"
