@@ -15,6 +15,7 @@ formulas=(
   python
   ripgrep
   tmux
+  nnn
   watchman
   yarn
   zsh

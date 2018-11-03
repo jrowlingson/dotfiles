@@ -74,6 +74,10 @@ Tmux is a terminal multiplexor which lets you create windows and splits in the t
 
 When tmux starts up, [login-shell](bin/login-shell) will be run and if it determines you are running this on macOS, it will call reattach-to-user-namespace, to fix the system clipboard for use inside of tmux.
 
+## nnn 
+
+[`nnn`](https://github.com/jarun/nnn) is an interactive terminal file manager. Open using the `n` command. Use `h`,`j`,`k`,`l` for basic navigation, `/` to filter, `.` to toggle hidden files, and `q` to quit or `Q` cd on quit. See the [keyboard shortcuts](https://github.com/jarun/nnn#keyboard-shortcuts) for advanced usage.
+
 ## Questions
 
 If you have questions, notice issues,  or would like to see improvements, please open an [issue](https://github.com/jrowlingson/dotfiles/issues/new) and I'm happy to help you out!
