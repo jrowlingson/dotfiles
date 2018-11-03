@@ -1,9 +1,11 @@
+# HTML
 snippet t "A simple tag" b
 <${1:div}>
 	$0
 </${1/(\w+).*/$1/}>
 endsnippet
 
+# Handlebars helpers
 snippet if
 {{#if $0}}
 {{/if}}
@@ -17,4 +19,110 @@ endsnippet
 
 snippet e
 {{else}}
+endsnippet
+
+# Tailwind CSS
+snippet r "rounded-sm" w 
+rounded-sm $0
+endsnippet
+
+snippet r "rounded" w 
+rounded $0
+endsnippet
+
+snippet rs "rounded-sm" w 
+rounded-sm $0
+endsnippet
+
+snippet b "border" w
+border $0
+endsnippet
+
+snippet ln "leading-none" w
+leading-none $0
+endsnippet
+
+snippet bn "border-none" w
+border-none $w
+endsnippet
+
+snippet bgw "bg-white" w
+bg-white $0
+endsnippet
+
+snippet tgll "text-gray-lighter" w
+text-gray-lighter $0
+endsnippet
+
+snippet tgl "text-gray-light" w
+text-gray-light $0
+endsnippet
+
+snippet tg "text-gray" w
+text-gray $0
+endsnippet
+
+snippet tgd "text-gray-dark" w
+text-gray-dark $0
+endsnippet
+
+snippet tgdd "text-gray-darker" w
+text-gray-darker $0
+endsnippet
+
+snippet s "shadow" w
+shadow $0
+endsnippet
+
+snippet f "flex" w
+flex $0
+endsnippet
+
+snippet ab "absoulte" w
+absolute $0
+endsnippet
+
+snippet fl "font-light" w
+font-light $0
+endsnippet
+
+snippet 2xs "text-2xs" w
+text-2xs $0
+endsnippet
+
+snippet xs "text-xs" w
+text-xs $0
+endsnippet
+
+snippet sm "text-sm" w
+text-sm $0
+endsnippet
+
+snippet lg "text-lg" w
+text-lg $0
+endsnippet
+
+snippet xl "text-xl" w
+text-xl $0
+endsnippet
+
+snippet fn "font-normal" w
+font-normal $0
+endsnippet
+
+snippet fm "font-medium" w
+font-medium $0
+endsnippet
+
+snippet fb "font-bold" w
+font-bold $0
+endsnippet
+
+snippet fsb "font-semibold" w
+font-semibold $0
+endsnippet
+
+# Ember components
+snippet ei
+<EsriIcon @iconId="$0" class="fill-current" />
 endsnippet
