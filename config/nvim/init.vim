@@ -97,6 +97,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Plugins {{{
 
+  Plug 'arthurxavierx/vim-caser'
   Plug 'SirVer/ultisnips' 
   Plug 'benmills/vimux'
   Plug 'tpope/vim-vinegar'

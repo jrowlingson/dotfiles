@@ -7,6 +7,7 @@ alias l="ls -laG"
 alias q="exit"
 alias k="kill -9"
 alias dot="cd ~/.dotfiles && nvim"
+alias dotd="cd ~/.dotfiles"
 
 # editing
 alias v="nvim"
@@ -28,7 +29,7 @@ alias h="cd ~"
 alias e="ember"
 alias eb="ember b"
 alias es="ember s"
-alias et="ember t"
+alias et="ember t --test-port 0"
 alias etm="ember t -s -m "
 alias ember-reset='rm -rf node_modules tmp bower_components dist && yarn && bower install'
 alias ember-exam='ember exam --split=4 --parallel && ember coverage-merge'
