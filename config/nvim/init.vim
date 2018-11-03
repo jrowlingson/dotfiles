@@ -74,6 +74,8 @@ call plug#begin('~/.config/nvim/plugged')
   let mapleader = ','
  
   nmap <silent> <leader>a :Rg<cr>
+
+  nnoremap Y y$
   
   " remap esc 
   inoremap jk <esc>
