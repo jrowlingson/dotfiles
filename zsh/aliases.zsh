@@ -1,5 +1,5 @@
 # reload zsh config
-alias reload!='RELOAD=1 source ~/.zshrc'
+alias rl='RELOAD=1 source ~/.zshrc'
 
 # general
 alias c="clear"
@@ -19,7 +19,8 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias code="cd ~/code"
-alias gh="cd ~/code/github && n"
+alias ghn="cd ~/code/github && n"
+alias gh="cd ~/code/github"
 alias ghj="cd ~/code/github/jrowlingson"
 alias ghe="cd ~/code/github/emberjs"
 alias ghec="cd ~/code/github/ember-cli"
