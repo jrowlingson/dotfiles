@@ -1,6 +1,9 @@
 # automatically renumber tmux windows
 set -g renumber-windows on
 
+# set -g default-terminal "tmux-256color-italic"
+set -ga terminal-overrides ",xterm-256color:Tc"
+
 # unbind default prefix and set it to ctrl+j
 unbind C-b
 set -g prefix C-space
@@ -72,4 +75,4 @@ bind C-v run "tmux set-buffer $(reattach-to-user-namespace pbpaste); tmux paste-
 # =========================================================
 # appearance settings
 # =========================================================
-# source ~/.dotfiles/tmux/base16.sh
+source ~/.dotfiles/tmux/base16.sh

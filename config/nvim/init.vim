@@ -110,7 +110,18 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'sickill/vim-pasta'
   Plug 'joukevandermaas/vim-ember-hbs'
   Plug 'pangloss/vim-javascript', { 'for': ['javascript'] }
+
+  Plug 'chriskempson/base16-vim' 
+  " Plug 'joshdick/onedark.vim'
   
+" }}}
+
+" LightLine {{{
+    Plug 'itchyny/lightline.vim'
+    Plug 'nicknisi/vim-base16-lightline'
+    let g:lightline = {
+    \   'colorscheme': 'base16',
+    \ }
 " }}}
 
 " FZF {{{
@@ -165,6 +176,19 @@ call plug#begin('~/.config/nvim/plugged')
 " }}}
 
 call plug#end()
+
+" Colorscheme and final setup {{{
+    " This call must happen after the plug#end() call to ensure
+    " that the colorschemes have been loaded
+    " let base16colorspace=256
+    " colorscheme base16-default-dark 
+    " let g:onedark_termcolors=16
+    " colorscheme onedark
+    if filereadable(expand("~/.vimrc_background"))
+      let base16colorspace=256
+      source ~/.vimrc_background
+    endif
+" }}}
 
 " allow netrw to remove non-empty local directories
 let g:netrw_localrmdir='rm -r'
