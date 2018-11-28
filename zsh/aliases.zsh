@@ -24,6 +24,7 @@ alias gh="cd ~/code/github"
 alias ghj="cd ~/code/github/jrowlingson"
 alias ghe="cd ~/code/github/emberjs"
 alias ghec="cd ~/code/github/ember-cli"
+alias tst="cd ~/code/tst"
 alias h="cd ~"
 
 # web dev
