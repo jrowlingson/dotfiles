@@ -177,6 +177,12 @@ call plug#begin('~/.config/nvim/plugged')
 
 call plug#end()
 
+" AutoGroups {{{
+  augroup write_commands
+      autocmd BufWritePre * %s/\s\+$//e
+  augroup end
+" }}}
+
 " Colorscheme and final setup {{{
     " This call must happen after the plug#end() call to ensure
     " that the colorschemes have been loaded
