@@ -28,11 +28,11 @@ call plug#begin('~/.config/nvim/plugged')
   set ignorecase
   set smartcase
   set incsearch
-  set nolazyredraw 
+  set nolazyredraw
   set hlsearch!
 
   set magic " Set magic on, for regex
-  
+
   " error bells
   set noerrorbells
   set visualbell
@@ -52,7 +52,7 @@ call plug#begin('~/.config/nvim/plugged')
   set smartindent     " does the right thing (mostly) in programs
   set ttyfast         " fast redraw
   set wrap            " enable line wrapping
-  
+
   " Tab control
   set tabstop=2      " number of spaces tab accounts for
   set expandtab      " don't use actual tab character (ctrl-v)
@@ -62,7 +62,7 @@ call plug#begin('~/.config/nvim/plugged')
   set t_co=256       " explicitly tell vim that the terminal supports 256 colors
 
   " enable 24 bit color if supported
-  if (has("termguicolors")) 
+  if (has("termguicolors"))
     set termguicolors
   endif
 
@@ -72,33 +72,33 @@ call plug#begin('~/.config/nvim/plugged')
 " General Mappings {{{
   " set a map leader for more key combos
   let mapleader = ','
- 
+
   nmap <silent> <leader>a :Rg<cr>
 
   nnoremap Y y$
-  
-  " remap esc 
+
+  " remap esc
   inoremap jk <esc>
 
   " shortcut to save
   nmap <leader>, :w<cr>
- 
+
   map <leader>ev :e! ~/.config/nvim/init.vim<cr>
 
   " switch between current and last buffer
   nmap <leader>. <c-^>
-  
+
   map <silent> <C-h> :call functions#WinMove('h')<cr>
   map <silent> <C-j> :call functions#WinMove('j')<cr>
   map <silent> <C-k> :call functions#WinMove('k')<cr>
   map <silent> <C-l> :call functions#WinMove('l')<cr>
-  
+
 " }}}
 
 " Plugins {{{
 
   Plug 'arthurxavierx/vim-caser'
-  Plug 'SirVer/ultisnips' 
+  Plug 'SirVer/ultisnips'
   Plug 'benmills/vimux'
   Plug 'tpope/vim-vinegar'
   Plug 'tpope/vim-abolish'
@@ -110,10 +110,9 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'sickill/vim-pasta'
   Plug 'joukevandermaas/vim-ember-hbs'
   Plug 'pangloss/vim-javascript', { 'for': ['javascript'] }
-
-  Plug 'chriskempson/base16-vim' 
+  Plug 'chriskempson/base16-vim'
   " Plug 'joshdick/onedark.vim'
-  
+
 " }}}
 
 " LightLine {{{
@@ -187,7 +186,7 @@ call plug#end()
     " This call must happen after the plug#end() call to ensure
     " that the colorschemes have been loaded
     " let base16colorspace=256
-    " colorscheme base16-default-dark 
+    " colorscheme base16-default-dark
     " let g:onedark_termcolors=16
     " colorscheme onedark
     if filereadable(expand("~/.vimrc_background"))

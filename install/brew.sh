@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo -e "\\n\\nbrew install"
+echo -e "\\n\\n brew install"
 echo "======================"
 if test ! "$(which brew)"; then
   echo "installing homebrew"
@@ -11,11 +11,11 @@ formulas=(
   fzf
   irssi
   neovim
+  nnn
   node
   python
   ripgrep
   tmux
-  nnn
   watchman
   yarn
   zsh
@@ -55,5 +55,5 @@ fi
 
 if [[ "$SHELL" != "$zsh_path" ]]; then
   chsh -s "$zsh_path"
-  echo "default shell chagned to $zsh_path" 
-fi 
+  echo "default shell chagned to $zsh_path"
+fi
