@@ -8,6 +8,7 @@ alias q="exit"
 alias k="kill -9"
 alias dot="cd ~/.dotfiles && nvim"
 alias dotd="cd ~/.dotfiles"
+alias abc="echo 'abcdefghijklmnopqrstuvwxyz'"
 
 # editing
 alias v="nvim"
