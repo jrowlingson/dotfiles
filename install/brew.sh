@@ -31,6 +31,10 @@ for formula in "${formulas[@]}"; do
   fi
 done
 
+echo -e "\\n\\n brew cask install"
+echo "======================"
+brew cask install karabiner-elements --no-binaries
+
 # after the install, setup fzf
 echo -e "\\n\\nrunning fzf install script..."
 echo -e "==================================="
