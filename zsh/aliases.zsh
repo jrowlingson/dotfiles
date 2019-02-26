@@ -3,7 +3,7 @@ alias rl='RELOAD=1 source ~/.zshrc'
 
 # general
 alias c="clear"
-alias l="ls -laG"
+alias l="ls -lAhG"
 alias q="exit"
 alias k="kill -9"
 alias dot="cd ~/.dotfiles && nvim"
