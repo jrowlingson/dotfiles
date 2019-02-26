@@ -111,6 +111,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'joukevandermaas/vim-ember-hbs'
   Plug 'pangloss/vim-javascript', { 'for': ['javascript'] }
   Plug 'chriskempson/base16-vim'
+  Plug 'christoomey/vim-sort-motion'
+  Plug 'TaDaa/vimade'
   " Plug 'joshdick/onedark.vim'
 
 " }}}
