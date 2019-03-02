@@ -33,8 +33,24 @@ done
 
 echo -e "\\n\\n brew cask install"
 echo "======================"
+casks=(
+  alacritty
+  google-chrome
+  spotify
+  slack
+  firefox
+  sourcetree
+)
+for cask in "${casks[@]}"; do
+  cask_name=$( echo "$cask" | awk '{print $1}' )
+  if brew cask list "$cask_name" > /dev/null 2>&1; then
+    echo "$cask_name already installed... skipping."
+  else
+    echo "installing $cask..."
+    brew cask install "$cask"
+  fi
+done
 brew cask install karabiner-elements --no-binaries
-brew cask install alacritty
 
 # after the install, setup fzf
 echo -e "\\n\\nrunning fzf install script..."
