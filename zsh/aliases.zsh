@@ -50,6 +50,7 @@ alias gap="git add -p"
 alias gs="git stash"
 alias gd="git diff"
 alias gdh="git diff HEAD"
+alias gdhi="git diff --cached"
 alias gsp="git stash pop"
 alias gco="git checkout"
 alias gcob='git checkout $(git branch | fzf)'
