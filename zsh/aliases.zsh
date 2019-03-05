@@ -41,7 +41,7 @@ alias y="yarn"
 
 # git
 alias g="git"
-alias gl="git l"
+alias gl="git log --oneline --decorate --all --graph"
 alias gb="git branch"
 alias gst="git status"
 alias gp="git pull"
