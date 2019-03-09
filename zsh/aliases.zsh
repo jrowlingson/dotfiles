@@ -7,6 +7,7 @@ alias l="ls -lAhG"
 alias q="exit"
 alias k="kill -9"
 alias dot="cd ~/.dotfiles && nvim"
+alias dota="cd ~/.dotfiles && nvim zsh/aliases.zsh"
 alias dotd="cd ~/.dotfiles"
 alias abc="echo 'abcdefghijklmnopqrstuvwxyz'"
 alias rr='c ; r'
@@ -27,6 +28,7 @@ alias ghj="cd ~/code/github/jrowlingson"
 alias ghe="cd ~/code/github/emberjs"
 alias ghec="cd ~/code/github/ember-cli"
 alias tst="cd ~/code/tst"
+alias tut="cd ~/code/tut"
 alias h="cd ~"
 
 # web dev
@@ -44,6 +46,8 @@ alias g="git"
 alias gl="git log --oneline --decorate --all --graph"
 alias gb="git branch"
 alias gst="git status"
+alias gpo='git push origin'
+alias gpoh='git push origin HEAD'
 alias gp="git pull"
 alias ga="git add \\."
 alias gap="git add -p"
@@ -55,7 +59,7 @@ alias gsp="git stash pop"
 alias gco="git checkout"
 alias gcob='git checkout $(git branch | fzf)'
 alias gcobr='git checkout --track `git branch -r --sort=committerdate | fzf`'
-alias gc="git clone"
+alias gc="git commit"
 
 # utils
 alias urlencode='node -e "console.log(encodeURIComponent(process.argv[1]))"'
