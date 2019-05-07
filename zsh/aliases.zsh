@@ -41,6 +41,7 @@ alias etm="ember t -s -m "
 alias ember-reset='rm -rf node_modules tmp bower_components dist && yarn && bower install'
 alias ember-exam='ember exam --split=4 --parallel && ember coverage-merge'
 alias y="yarn"
+alias yl="yarn lint:js && yarn lint:hbs"
 
 # git
 alias g="git"
@@ -70,3 +71,4 @@ alias st='open -a SourceTree .'
 # hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
