@@ -138,11 +138,15 @@ snippet cls
 console.log(\`$0\`)
 endsnippet
 
-snippet clvj
+snippet clij
 console.log(\`$1: ${JSON.stringify($0)}\`)
 endsnippet
 
 snippet clv
+console.log(\`$1\`, $0)
+endsnippet
+
+snippet cli
 console.log(\`$1: ${$0}\`)
 endsnippet
 
@@ -164,7 +168,7 @@ snippet ieo
 import { $0 } from '@ember/object'
 endsnippet
 
-snippet m 
+snippet m
 module('$1', function(hooks) {
 	$0
 })
