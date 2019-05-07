@@ -78,3 +78,12 @@ PROMPT_SYMBOL='❯'
 export PROMPT='%(?.%F{207}.%F{160})❯%f '
 # export PROMPT='%(?.%F{207}.%F{160})$PROMPT_SYMBOL%f '
 # export RPROMPT='`git_dirty`%F{241}$vcs_info_msg_0_%f`git_arrows``suspended_jobs`'
+
+function zle-line-init zle-keymap-select {
+    VIM_PROMPT="%{$fg_bold[color06]%} [% NORMAL]%  %{$reset_color%}"
+    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
