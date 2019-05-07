@@ -1,12 +1,16 @@
 # disable all beeping
-setopt no_beep 
+setopt no_beep
+
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-# Whenever the user enters a line with history substitution, don't execute 
-# the line directly; instead, perform history substitution and reload the 
+# Whenever the user enters a line with history substitution, don't execute
+# the line directly; instead, perform history substitution and reload the
 # line into the editing buffer.
 setopt hist_verify
 
