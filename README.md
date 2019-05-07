@@ -23,7 +23,7 @@ If on macOS, you will need to install the Xcode CLI tools before continuing. To 
 Then, clone the dotfiles repository to your home directory as `~/.dotfiles`. 
 
 ```bash
-➜ git clone https://github.com/nicknisi/dotfiles.git ~/.dotfiles
+➜ git clone https://github.com/jrowlingson/dotfiles.git ~/.dotfiles
 ➜ cd ~/.dotfiles
 ➜ ./install.sh
 ```
