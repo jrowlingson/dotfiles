@@ -29,7 +29,7 @@ call plug#begin('~/.config/nvim/plugged')
   set smartcase
   set incsearch
   set nolazyredraw
-  set hlsearch!
+  set nohlsearch
 
   set magic " Set magic on, for regex
 
@@ -80,8 +80,11 @@ call plug#begin('~/.config/nvim/plugged')
   " remap esc
   inoremap jk <esc>
 
+  inoremap {<CR> {<CR>}<ESC>O
+
   " shortcut to save
   nmap <leader>, :w<cr>
+  nmap <leader>n :set relativenumber!<cr>
 
   map <leader>ev :e! ~/.config/nvim/init.vim<cr>
 
@@ -113,7 +116,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'pangloss/vim-javascript', { 'for': ['javascript'] }
   Plug 'chriskempson/base16-vim'
   Plug 'christoomey/vim-sort-motion'
-  Plug 'TaDaa/vimade'
+  " Plug 'TaDaa/vimade'
+  " Plug 'HerringtonDarkholme/yats.vim' " typescript syntax
   " Plug 'joshdick/onedark.vim'
 
 " }}}
