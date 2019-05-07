@@ -5,6 +5,9 @@ setopt no_beep
 bindkey -v
 export KEYTIMEOUT=1
 
+bindkey '^P' up-history
+bindkey '^N' down-history
+
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
