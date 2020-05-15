@@ -26,6 +26,7 @@ alias code="cd ~/code"
 alias ghn="cd ~/code/github && n"
 alias gh="cd ~/code/github"
 alias ghj="cd ~/code/github/jrowlingson"
+alias ghjw="open https://github.com/jrowlingson"
 alias ghe="cd ~/code/github/emberjs"
 alias ghec="cd ~/code/github/ember-cli"
 alias tst="cd ~/code/tst"
@@ -35,13 +36,15 @@ alias h="cd ~"
 # web dev
 alias e="ember"
 alias eb="ember b"
-alias es="ember s"
-alias et="ember t --test-port 0 --watcher=node"
+alias es="yarn && ember s"
+alias esr="yarn && ember s --port 0"
+alias ess="ember s --ssl true --watcher=node"
+alias et="ember t --test-port 0 --reporter=dot"
 alias etm="ember t -s -m "
 alias ember-reset='rm -rf node_modules tmp bower_components dist && yarn && bower install'
 alias ember-exam='ember exam --split=4 --parallel && ember coverage-merge'
 alias y="yarn"
-alias yl="yarn lint:js && yarn lint:hbs"
+alias yl="yarn lint:js && yarn lint:hbs && yarn lint:css"
 
 # git
 alias g="git"
@@ -55,7 +58,7 @@ alias ga="git add \\."
 alias gap="git add -p"
 alias gs="git stash"
 alias gd="git diff"
-alias gdh="git diff HEAD"
+alias gdh="clear && git diff HEAD"
 alias gdhi="git diff --cached"
 alias gsp="git stash pop"
 alias gco="git checkout"
@@ -72,3 +75,9 @@ alias st='open -a SourceTree .'
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
+release_notes() {
+  last_tag=$1
+  end_tag=${2:='HEAD'}
+  git log $last_tag..$end_tag --pretty=format:%s | sed 's/^/* /' | sort
+}
+alias rn='release_notes'
