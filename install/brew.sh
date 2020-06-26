@@ -19,6 +19,7 @@ formulas=(
   watchman
   yarn
   zsh
+  reattach-to-user-namespace
 )
 
 for formula in "${formulas[@]}"; do
