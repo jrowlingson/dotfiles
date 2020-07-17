@@ -76,6 +76,10 @@ call plug#begin('~/.config/nvim/plugged')
   nmap <silent> <leader>a :Rg<cr>
 
   nnoremap Y y$
+  nnoremap Q :q!<cr>
+  nnoremap <D-Q> :qa!<cr>
+  nnoremap H ^
+  nnoremap L $
 
   " remap esc
   inoremap jk <esc>
