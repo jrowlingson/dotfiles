@@ -185,6 +185,21 @@ call plug#end()
   augroup write_commands
       autocmd BufWritePre * %s/\s\+$//e
   augroup end
+
+  augroup custom_marks
+    autocmd!
+    autocmd BufLeave *.css,*.sass normal! mC
+    autocmd BufLeave *.html       normal! mH
+    autocmd BufLeave *.js,*.ts    normal! mJ
+    autocmd BufLeave *.md         normal! mM
+    autocmd BufLeave *.yml,*.yaml normal! mY
+    autocmd BufLeave .env*        normal! mE
+  augroup end
+
+
+  augroup coc_commands
+    autocmd FileType json syntax match Comment +\/\/.\+$+
+  augroup end
 " }}}
 
 " Colorscheme and final setup {{{
