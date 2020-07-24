@@ -1,0 +1,12 @@
+{
+  "emmet.includeLanguages": {
+    "html.handlebars": "html"
+  },
+  "emmet.preferences": {
+    "format.forceIndentationForTags": [
+      "div",
+      "body"
+    ]
+  },
+  "html.filetypes": [ "html", "handlebars", "html.handlebars" ]
+}

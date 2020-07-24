@@ -123,6 +123,7 @@ call plug#begin('~/.config/nvim/plugged')
   " Plug 'TaDaa/vimade'
   " Plug 'HerringtonDarkholme/yats.vim' " typescript syntax
   " Plug 'joshdick/onedark.vim'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " }}}
 
