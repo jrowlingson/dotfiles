@@ -90,7 +90,8 @@ call plug#begin('~/.config/nvim/plugged')
   nmap <leader>, :w<cr>
   nmap <leader>n :set relativenumber!<cr>
 
-  map <leader>ev :e! ~/.config/nvim/init.vim<cr>
+  map <leader>ev :split $MYVIMRC<cr>
+  map <leader>sv :source $MYVIMRC<cr>
 
   " switch between current and last buffer
   nmap <leader>. <c-^>
@@ -99,6 +100,10 @@ call plug#begin('~/.config/nvim/plugged')
   map <silent> <C-j> :call functions#WinMove('j')<cr>
   map <silent> <C-k> :call functions#WinMove('k')<cr>
   map <silent> <C-l> :call functions#WinMove('l')<cr>
+
+  onoremap p i(
+  onoremap ' i'
+  onoremap " i"
 
 " }}}
 
@@ -115,15 +120,23 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-unimpaired'
+  Plug 'tpope/vim-projectionist'
   Plug 'sickill/vim-pasta'
   Plug 'joukevandermaas/vim-ember-hbs'
+  Plug 'AndrewRadev/ember_tools.vim'
   Plug 'pangloss/vim-javascript', { 'for': ['javascript'] }
   Plug 'chriskempson/base16-vim'
   Plug 'christoomey/vim-sort-motion'
+  Plug 'amadeus/vim-convert-color-to'
   " Plug 'TaDaa/vimade'
-  " Plug 'HerringtonDarkholme/yats.vim' " typescript syntax
+  Plug 'HerringtonDarkholme/yats.vim' " typescript syntax
   " Plug 'joshdick/onedark.vim'
+  " Plug 'leafgarland/typescript-vim', { 'for': ['typescript', 'typescript.tsx'] }
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " Plug 'justinmk/vim-sneak'
+  " Plug 'elixir-editors/vim-elixir'
+  " Plug 'meain/vim-colorswitch', { 'do': 'UpdateRemotePlugins' }
+  Plug 'mhinz/vim-signify'
 
 " }}}
 
@@ -131,7 +144,14 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'itchyny/lightline.vim'
     Plug 'nicknisi/vim-base16-lightline'
     let g:lightline = {
-    \   'colorscheme': 'base16',
+    \ 'colorscheme': 'base16',
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+    \ },
+    \ 'component_function': {
+    \   'gitbranch': 'fugitive#head'
+    \ }
     \ }
 " }}}
 
@@ -220,3 +240,34 @@ call plug#end()
 let g:netrw_localrmdir='rm -r'
 
 " vim:set foldmethod=marker foldlevel=0
+
+" Coc
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+
+" hi typescriptAsyncFuncKeyword gui=italic
+hi Keyword gui=italic
+hi htmlArg gui=italic
+hi Comment gui=italic
+hi Type    gui=italic
+hi htmlArg gui=italic
+" hi typescriptAsyncFuncKeyword cterm=italic
+hi Keyword cterm=italic
+hi htmlArg cterm=italic
+hi Comment cterm=italic
+hi Type    cterm=italic
