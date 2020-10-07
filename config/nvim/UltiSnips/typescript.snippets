@@ -1,4 +1,24 @@
 snippet s
+$0: string,
+endsnippet
+
+snippet n
+$0: number,
+endsnippet
+
+snippet l
+let $1: $2 = $0
+endsnippet
+
+snippet ks
+$1: "$0",
+endsnippet
+
+snippet k
+$1: $0,
+endsnippet
+
+snippet se
 set(this, '$1', $0)
 endsnippet
 
@@ -183,9 +203,9 @@ didInsertElement() {
 
 endsnippet
 snippet in
-init() {
-	this._super(...arguments)
-},
+interface $1 {
+  $0
+}
 
 endsnippet
 
