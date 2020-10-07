@@ -1,5 +1,10 @@
-" .vimrc / init.vim
-" The following vim/neovim configuration works for botom vim and neovim
+"    _                   _ _
+"   (_)_ __ _____      _| (_)_ __   __ _ ___  ___  _ __
+"   | | '__/ _ \ \ /\ / / | | '_ \ / _` / __|/ _ \| '_ \
+"   | | | | (_) \ V  V /| | | | | | (_| \__ \ (_) | | | |
+"  _/ |_|  \___/ \_/\_/ |_|_|_| |_|\__, |___/\___/|_| |_|
+" |__/https://github.com/jrowlingson|___/
+"
 
 " ensure vim-plug is installed and then load it
 call functions#PlugLoad()
