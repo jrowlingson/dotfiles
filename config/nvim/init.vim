@@ -3,7 +3,7 @@
 "   | | '__/ _ \ \ /\ / / | | '_ \ / _` / __|/ _ \| '_ \
 "   | | | | (_) \ V  V /| | | | | | (_| \__ \ (_) | | | |
 "  _/ |_|  \___/ \_/\_/ |_|_|_| |_|\__, |___/\___/|_| |_|
-" |__/https://github.com/jrowlingson\___|
+" |__/ https://github.com/jrowlingson \_|
 "
 
 " ensure vim-plug is installed and then load it
