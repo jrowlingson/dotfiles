@@ -1,3 +1,11 @@
+snippet eld3
+// eslint-disable-line ember/use-ember-data-rfc-395-imports
+endsnippet
+
+snippet eld
+// eslint-disable-line $0
+endsnippet
+
 snippet s
 $0: string,
 endsnippet
@@ -184,6 +192,10 @@ snippet ie
 import { $0 } from '@ember/$1'
 endsnippet
 
+snippet ied
+import $1 from '@ember-data/$0'
+endsnippet
+
 snippet ieo
 import { $0 } from '@ember/object'
 endsnippet
@@ -214,11 +226,7 @@ snippet su
 endsnippet
 
 snippet a
-actions: {
-	foo() {
-		$0
-	}
-},
+assert
 endsnippet
 
 snippet r
