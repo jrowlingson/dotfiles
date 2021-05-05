@@ -98,6 +98,9 @@ call plug#begin('~/.config/nvim/plugged')
   map <leader>ev :split $MYVIMRC<cr>
   map <leader>sv :source $MYVIMRC<cr>
 
+  " git
+  nmap <leader>gs :G<cr>
+
   " switch between current and last buffer
   nmap <leader>. <c-^>
 
@@ -142,6 +145,7 @@ call plug#begin('~/.config/nvim/plugged')
   " Plug 'elixir-editors/vim-elixir'
   " Plug 'meain/vim-colorswitch', { 'do': 'UpdateRemotePlugins' }
   Plug 'mhinz/vim-signify'
+  Plug 'mattn/emmet-vim'
 
 " }}}
 
@@ -276,3 +280,5 @@ hi Keyword cterm=italic
 hi htmlArg cterm=italic
 hi Comment cterm=italic
 hi Type    cterm=italic
+
+colorscheme base16-gruvbox-dark-hard
