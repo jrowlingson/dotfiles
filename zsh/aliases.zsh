@@ -62,6 +62,8 @@ alias gdh="clear && git diff HEAD"
 alias gdhi="git diff --cached"
 alias gsp="git stash pop"
 alias gco="git checkout"
+alias gcom="git checkout master"
+alias gcod="git checkout develop"
 alias gcob='git checkout $(git branch | fzf)'
 alias gcobr='git checkout --track `git branch -r --sort=committerdate | fzf`'
 alias gc="git commit"
