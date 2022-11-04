@@ -1,5 +1,7 @@
 # dotfiles
 
+:warning: _I am now managing my dotfiles in a private repo_.
+
 This repository contains the `rg`, `vim`, `tmux`, and `zsh` configurations I use for development. This setup is specific to macOS, although, it could be updated to support non-macOS environments. Feel free to take a look around and steal any ideas in here. If you are interested in the overall idea of sharing your own set of dotfiles on GitHub take a look at [this](https://dotfiles.github.io/).
 
 ## Initial Setup and Installation
